@@ -1,0 +1,284 @@
+/* importing fonts from the google fonts api */
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;600;700&family=Poppins:wght@100&family=Roboto&family=Source+Sans+Pro:wght@200&display=swap");
+
+/* --------------------------universal selector for whole page -------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*-------------------- backup for the old browsers who don't support new linear gradients */
+  background-color: #00dbde;
+  background-image: linear-gradient(
+    90deg,
+    rgba(113, 111, 211, 0.712) 20%,
+    rgba(230, 53, 218, 0.701) 61.6%
+  );
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-weight: 700;
+}
+
+h1 {
+  color: #030d05d5;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  padding: 10px 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border: 1px solid rgba(59, 158, 255, 1);
+  width: 40.9%;
+  text-align: center;
+  border-radius: 10px;
+  /* animation for the h1 tag */
+  /* animation: doAnimate 0.7s ease-in-out 1s infinite alternate-reverse both; */
+}
+
+/*----------------------------- animation for the h1 element -----------------------*/
+
+@keyframes doAnimate {
+  0% {
+  
+    color: #fa4816;
+    padding-left: 35px;
+  }
+  50% {
+   
+    color: rgb(56, 15, 240);
+    padding-right: 30px;
+  }
+  100% {
+    opacity: 100%;
+    color: black;
+    padding-right: 65px;
+  }
+}
+
+/* hovering the h1 element */
+h1:hover {
+  box-shadow: 7px 5px 10px salmon;
+  animation: none;
+  border: 1px solid blue;
+  color: rgb(188, 144, 144);
+}
+
+
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result {
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  height: 400px;
+  width: 300px;
+  border: 2px solid darksalmon;
+  border-radius: 12px;
+  transition: all 0s ease-in 0.1s;
+}
+
+p {
+  writing-mode: vertical-lr;
+  animation: reAnimate 1s ease-out infinite alternate;
+  color: rgba(247, 83, 181, 0.884);
+}
+
+p:hover {
+  content: icon;
+}
+
+h3 {
+  color: #fff;
+  display: none;
+  border-radius: 6px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  height: 5%;
+  letter-spacing: 2px;
+  padding-top: 5px;
+  width: 40.6%;
+  background-image: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
+}
+
+@keyframes reAnimate {
+  0% {
+    margin-top: -50px;
+    opacity: 100%;
+    color: rgba(247, 83, 181, 0.884);
+  }
+  50% {
+    opacity: 70%;
+    color: rgba(247, 83, 181, 0.884);
+    text-shadow: #000;
+  }
+  100% {
+    margin-bottom: -90px;
+    opacity: 100%;
+    font-weight: 700;
+    color: rgba(247, 83, 181, 0.884);
+  }
+}
+
+.result:hover {
+  box-shadow: 4px 9px 19px salmon;
+  border: 1px solid blue;
+}
+.result img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border: 1px solid darksalmon;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  background-image: linear-gradient(135deg, #fccf31 10%, #f55555 100%);
+  transition: all 0s ease-in 0.1s;
+}
+
+/* special selectors below 2 for small screen on and off */
+
+.forSmallScreen{
+  display: none;
+}
+
+.notSmallScreen{
+  display:block;
+}
+
+/* ------------------------------------ */
+
+button:hover {
+  box-shadow: 6px 6px 25px salmon;
+  cursor: pointer;
+  border: 2px solid white;
+  color: black;
+}
+
+button:active {
+  transform: scale(0.94);
+  color: aqua;
+}
+
+button:focus {
+  outline: invert;
+  color: rgba(255, 0, 0, 0.436);
+}
+/* --------------------------------footer styling------------------ */
+
+footer {
+  width: 100vw;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: auto;
+  font-weight: 700;
+  color: rgb(237, 223, 223);
+}
+
+
+footer a {
+  text-decoration: none;
+
+  font-weight: 600;
+  font-size: 18px;
+  margin: 5px;
+}
+
+
+/* --------------------------------span special styling------------------ */
+
+span a {
+ 
+  color: rgb(20, 5, 227);
+  font-size: 20px;
+  border-radius: 50%;
+}
+/* --------------------------------span styling------------------ */
+
+span {
+  animation: love 0.5s ease-in 0.5s 3 alternate both;
+}
+/* --------------------------------span animation defining styling------------------ */
+
+@keyframes love {
+  from {
+    font-size: 12px;
+  }
+  to {
+    font-size: 18px;
+  }
+}
+
+img{
+	border-radius: 10px;
+}
+
+/* --------------------------------media queries for mobile and desktop  styling------------------ */
+/* ---------------------------------------------------------------------------------------------- */
+
+@media (max-width: 600px) and (min-width: 300px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .results {
+    display: block;
+    margin: 15%;
+	margin-top: -10px;
+  }
+
+  h1 {
+    width: 100%;
+    display: block;
+    border-radius: 0%;
+  }
+  h3 {
+    width: 100%;
+    height: 10%;
+    border-radius: 0%;
+    margin: 10px;
+  }
+
+  .forSmallScreen{
+    display: block;
+  }
+
+  .notSmallScreen{
+    display: none;
+
+  }
+
+  #dog-button{
+	margin-top: -95px;
+  }
+
+
+  footer{
+	font-size: 18px;
+	margin-top: -10px;
+
+  }
+}
